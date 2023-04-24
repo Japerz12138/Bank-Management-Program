@@ -2,7 +2,7 @@ package com.nyit.japerz;
 
 import java.sql.DriverManager;
 import java.sql.Connection;
-import javax.xml.crypto.Data;
+
 class Database {
     public static Connection connection;
     public static void connect(){
@@ -13,8 +13,8 @@ class Database {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection("jdbc:mysql://localhost/bank_db?serverTimezone=EST", DatabaseUserName, DatabasePassword);
             System.out.println("[INFO] Connected to Database " + DatabaseUserName + "!");
-        } catch (Exception e) {
-            System.out.println(e);
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
     }
 
