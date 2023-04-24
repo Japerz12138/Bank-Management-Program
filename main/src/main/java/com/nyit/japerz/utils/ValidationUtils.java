@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 public class ValidationUtils {
 
+    //Checks the date is valid or not
     public static boolean dateChecker(int month, int day, int year) {
         if (year < 0 || month < 1 || month > 12 || day < 1) {
             return false;
@@ -28,6 +29,7 @@ public class ValidationUtils {
         return day <= daysInMonth;
     }
 
+    //Check the email is valid or not
     public static boolean emailChecker(String email) {
         String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
         Pattern pattern = Pattern.compile(regex);

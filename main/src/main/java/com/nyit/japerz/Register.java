@@ -28,6 +28,7 @@ public class Register extends JFrame{
     private JTextField dob_dayTF;
     private JTextField dob_yearTF;
 
+    //Initialize the window
     public Register() {
         ImageIcon img = new ImageIcon("I:\\CODE\\Bank-Management-Program\\bank-flat.png");
         setContentPane(panel1);
@@ -39,12 +40,16 @@ public class Register extends JFrame{
         setIconImage(img.getImage());
 
         setLookAndFeel();
+
+        //Register Button
         registerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 performRegistration();
             }
         });
+
+        //Cancel Button
         cancelButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -54,11 +59,15 @@ public class Register extends JFrame{
         });
     }
 
+    //Main Registration Function
     private void performRegistration(){
         try{
+
+            //Open connection to database
             Connection connection = Database.connection; // Connect to database
             Statement stm = connection.createStatement();
 
+            //Get contents from the text field
             String name = nameTF.getText();
             String username = usernameTF.getText();
             String email = emailTF.getText();
@@ -70,6 +79,7 @@ public class Register extends JFrame{
             String password = new String(passwordPTF.getPassword());
             String confirmPassword = new String(confirmPasswordPTF.getPassword());
 
+            //Set date format and check if the date is valid
             String dobStr = dob_month + "/" + dob_day + "/" + dob_year;
             SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
             sdf.setLenient(false);
@@ -80,23 +90,25 @@ public class Register extends JFrame{
                 return;
             }
 
+            //Change date format to what mysql can read
             String dobSqlStr = dob_year + "-" + dob_month + "-" + dob_day;
 
-
+            //Invalidate email address message
             if (!ValidationUtils.emailChecker(email)) {
                 JOptionPane.showMessageDialog(this, "Invalid email address! Please enter a valid email address.");
                 return;
             }
 
+            //Password not match message
             if (!password.equals(confirmPassword)) {
                 JOptionPane.showMessageDialog(this, "Oops!, passwords do not match!");
                 return;
             }
 
-            String dob = String.format("%02d/%02d/%04d", dob_month, dob_day, dob_year);
-
+            //Encrypt password with SHA256
             String hashedPasswordEntered = HashingUtils.sha256(password);
 
+            //Check the customers_id position
             String query = "SELECT MAX(customers_id) FROM customers";
             ResultSet rs = stm.executeQuery(query);
             int customerID = 1;
@@ -109,6 +121,7 @@ public class Register extends JFrame{
 
             JOptionPane.showMessageDialog(this, "Registration successful! Please login!");
 
+            //Close current window and back to log in window
             Login login = new Login();
             dispose();
 
@@ -119,6 +132,7 @@ public class Register extends JFrame{
         }
     }
 
+    //Set the window looks modern on Windows
     public void setLookAndFeel() {
         try {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");

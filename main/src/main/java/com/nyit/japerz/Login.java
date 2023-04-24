@@ -43,12 +43,14 @@ public class Login extends JFrame{
         // Set the loginTypeCBModel as the model for the loginTypeCB ComboBox
         loginTypeCB.setModel(loginTypeCBModel);
 
+        //Login Button
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 performLogin();
             }
         });
+        //Register Button
         newCustomerRegisterButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -57,6 +59,7 @@ public class Login extends JFrame{
             }
         });
 
+        //Enter key detection
         passwordPTF.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
@@ -67,12 +70,14 @@ public class Login extends JFrame{
         });
     }
 
+    //Connects to database and start initialize the window
     public static void main(String[] args) {
         Database.connect();
         setupClosingDBConnection();
         Login login = new Login();
     }
 
+    //Set the window looks modern on Windows
     public void setLookAndFeel() {
         try {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
@@ -81,13 +86,17 @@ public class Login extends JFrame{
         }
     }
 
+    //Main Login Function
     private void performLogin() {
+
+        //get texts from text field
         String username = usernameTF.getText();
         String password = new String(passwordPTF.getPassword());
         String selectedLoginType = loginTypeCB.getSelectedItem().toString();
         String tableName = "";
         String columnName = "";
 
+        //Check the selection in combo box
         if (selectedLoginType.equals("Customers")){
             tableName = "customers";
             columnName = tableName;
@@ -99,6 +108,7 @@ public class Login extends JFrame{
             columnName = tableName;
         }
 
+        //Check the database username for login
         String sql = "SELECT * FROM bank_db." + tableName + " WHERE " + columnName + "_username = ?";
 
         try (PreparedStatement statement = Database.connection.prepareStatement(sql)) {
@@ -107,6 +117,7 @@ public class Login extends JFrame{
 
             if (rs.next()) {
                 String hashedPasswordFromDatabase = rs.getString(columnName + "_password");
+                //Encrypt the password to SHA256 foe later searching in database
                 String hashedPasswordEntered = HashingUtils.sha256(password);
 
                 if (hashedPasswordFromDatabase.equals(hashedPasswordEntered)) {
@@ -127,6 +138,7 @@ public class Login extends JFrame{
     }
 
 
+    //Setup Closing Database Connection Function
     public static void setupClosingDBConnection() {
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             public void run() {
