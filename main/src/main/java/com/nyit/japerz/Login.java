@@ -21,6 +21,10 @@ public class Login extends JFrame{
     private JPasswordField passwordPTF;
     private JButton newCustomerRegisterButton;
 
+    //Set pass through to other classes.
+    private static String usernamePT;
+    private static String passwordPT;
+
     static DefaultComboBoxModel<String> loginTypeCBModel = new DefaultComboBoxModel<String>();
 
     public Login() {
@@ -91,6 +95,7 @@ public class Login extends JFrame{
 
         //get texts from text field
         String username = usernameTF.getText();
+        usernamePT = username;
         String password = new String(passwordPTF.getPassword());
         String selectedLoginType = loginTypeCB.getSelectedItem().toString();
         String tableName = "";
@@ -106,6 +111,8 @@ public class Login extends JFrame{
         } else if (selectedLoginType.equals("Admin")){
             tableName = "admins";
             columnName = tableName;
+        } else {
+            System.out.println("Eh...Nothing is selected???? HOW?");
         }
 
         //Check the database username for login
@@ -119,11 +126,22 @@ public class Login extends JFrame{
                 String hashedPasswordFromDatabase = rs.getString(columnName + "_password");
                 //Encrypt the password to SHA256 foe later searching in database
                 String hashedPasswordEntered = HashingUtils.sha256(password);
+                passwordPT = hashedPasswordEntered;
 
                 if (hashedPasswordFromDatabase.equals(hashedPasswordEntered)) {
                     // Login successful
                     JOptionPane.showMessageDialog(null, "Login successful!");
                     System.out.println("[INFO] User " + username + " logged in! Password correct and encrypted.");
+                    if (selectedLoginType.equals("Customers")){
+                        CustomerPortal cp = new CustomerPortal();
+                        dispose();
+                    } else if (selectedLoginType.equals("Employee")) {
+                        //TODO: Finish the EmployeePortal and switch window here!
+                    } else if (selectedLoginType.equals("Admin")) {
+                        //TODO: Finish the AdminPortal and switch window here!
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Something is wrong! Please contact a bank employee! Error code: L-001");
+                    }
                 } else {
                     // Incorrect password
                     JOptionPane.showMessageDialog(null, "Incorrect password!");
@@ -146,5 +164,15 @@ public class Login extends JFrame{
                 } catch (SQLException e) { e.printStackTrace(); }
             }
         }, "Shutdown-thread"));
+    }
+
+    //Get the username pass through
+    public static String getUsernamePT() {
+        return usernamePT;
+    }
+
+    //Get the password after hashing operation pass through
+    public static String getPasswordPT() {
+        return passwordPT;
     }
 }

@@ -1,0 +1,6 @@
+N-001: Unable to establish connection with the JM Bank server.
+    > Check the computer network and also the status of the server. Contact server staff.
+L-001: User used an invalid login type!
+    > Check if user selected the correct login type.
+CP-001: Customer Portal has received a invalid username and password to identify user's identity!
+    > This should not happened, please contact program developer for bug fix immediately!
