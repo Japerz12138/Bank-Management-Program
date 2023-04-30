@@ -124,6 +124,7 @@
               </grid>
             </constraints>
             <properties>
+              <font name="Microsoft YaHei UI" style="0"/>
               <text value=""/>
             </properties>
           </component>
@@ -142,7 +143,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="Microsoft YaHei UI" style="0"/>
+            </properties>
           </component>
           <component id="a29f9" class="javax.swing.JLabel">
             <constraints>
@@ -159,7 +162,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="Microsoft YaHei UI" style="0"/>
+            </properties>
           </component>
           <component id="e3e92" class="javax.swing.JLabel">
             <constraints>
@@ -250,6 +255,7 @@
               </grid>
             </constraints>
             <properties>
+              <font name="Microsoft YaHei UI" style="0"/>
               <text value="Month"/>
               <toolTipText value="Month"/>
             </properties>
@@ -261,6 +267,7 @@
               </grid>
             </constraints>
             <properties>
+              <font name="Microsoft YaHei UI" style="0"/>
               <text value="Day"/>
             </properties>
           </component>
@@ -271,6 +278,7 @@
               </grid>
             </constraints>
             <properties>
+              <font name="Microsoft YaHei UI" style="0"/>
               <text value="Year"/>
             </properties>
           </component>
@@ -279,6 +287,7 @@
               <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Microsoft YaHei UI" style="0"/>
               <text value="Date of birth"/>
             </properties>
           </component>

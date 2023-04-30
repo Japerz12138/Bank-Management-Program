@@ -34,7 +34,7 @@ public class Register extends JFrame{
         setContentPane(panel1);
         setTitle("JM Bank - Register");
         setSize(800, 550);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setVisible(true);
         setLocationRelativeTo(null);
         setIconImage(img.getImage());

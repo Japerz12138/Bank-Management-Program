@@ -36,6 +36,7 @@ public class Login extends JFrame{
         setVisible(true);
         setLocationRelativeTo(null);
         setIconImage(img.getImage());
+        setResizable(false);
 
         setLookAndFeel();
 

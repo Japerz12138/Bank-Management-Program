@@ -57,6 +57,12 @@ public class CustomerPortal extends JFrame{
                 }
             }
         });
+        accountsManagmentButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AccountManager am = new AccountManager();
+            }
+        });
     }
 
     //Function to use username and password to get the user's legal name.

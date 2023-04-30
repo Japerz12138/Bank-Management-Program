@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.nyit.japerz.OpenAccount">
+  <grid id="27dc6" binding="panel1" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="5abfa" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14277338"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <hspacer id="f6cf5">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <component id="8bb39" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Microsoft YaHei UI" size="22" style="1"/>
+              <foreground color="-131585"/>
+              <text value="Open Account"/>
+            </properties>
+          </component>
+          <hspacer id="9652c">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="15" height="15"/>
+              </grid>
+            </constraints>
+          </hspacer>
+          <vspacer id="8a4bd">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="15" height="15"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <vspacer id="2c437">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="15" height="15"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <component id="7ca4e" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Microsoft YaHei UI" style="0"/>
+              <foreground color="-6249818"/>
+              <text value="Submit a request to open an new account"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="7b6cf" layout-manager="GridLayoutManager" row-count="5" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <scrollpane id="5bea">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <focusable value="true"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="48cdc" class="javax.swing.JTextArea" binding="byClickingTheAgreeTextArea" default-binding="true">
+                <constraints/>
+                <properties>
+                  <font name="Microsoft YaHei UI"/>
+                  <lineWrap value="true"/>
+                  <text value="By clicking the &quot;Agree&quot; button, you agree to the following terms and submit the application for review.&#10;&#10;Client Acceptance Policy&#10;&#10;1. The Prospective Client acknowledges and understands that the Company is not obliged &#10;and/or required under any applicable laws or regulations to accept any Prospective &#10;Client as its Client.&#10;&#10;2. The Company has the right to decline and/or refuse to accept a Prospective Client as its &#10;Client, if it reasonably believes that the Prospective Client might pose a risk to the &#10;Company and/or if accepting such a Prospective Client shall be against the Company’s &#10;Client Acceptance Policy. &#10;&#10;3. It should be noted that the Company is under no obligation to provide any reason for not &#10;accepting a Prospective Client as its Client.&#10;&#10;4. The Prospective Client must fill in, submit the online Account Opening Application Form &#10;found on the Company’s website, and provide to the Company all the required &#10;identification documentation. The Company shall then send a notice of acceptance to &#10;the Prospective Client confirming that he has been successfully accepted as a Client of &#10;the Company.&#10;&#10;5. The Client acknowledges and understands that the Company has the right to refuse to &#10;activate an account and/or shall not accept any money from any Prospective Client until &#10;all documentation requested has been provided to the Company, which has been&#10;properly and fully completed by the Prospective Client&#10;&#10;6. The Company has the right to request additional documentation and/or information &#10;from the Client at any time throughout the term of this Agreement and/or the business &#10;relationship with the Client. Should the Client not provide such additional &#10;documentation and/or information the Company may at its own discretion terminate its &#10;business relationship with the Client.&#10;&#10;7. The Company has the right to close any Account opened by a Prospective Client which &#10;has not been approved by the Company and which has been pending for approval for a &#10;set period of 3 (three) months&#10;&#10;Services&#10;1. The Company offers to its Clients the Investment and Ancillary services as Principal in &#10;relation to CFDs on currencies, equities, precious metals, financial indices, &#10;cryptocurrencies and any other trading tools. &#10;&#10;2. The Company strives to provide the best possible price to its Clients, and makes every &#10;effort and necessary arrangements to do so; however, it may be impossible to guarantee &#10;the execution of any or all of the pending orders at the declared price. ‘’Stop Loss’’, &#10;‘’Take Profit’’, ‘’Buy Limit’’, ‘’Buy Stop’’, ‘’Sell Limit’’, ‘’Sell Stop Orders’’ on Financial &#10;Instruments offered by the Company are executed at the declared by the Client price on &#10;the first current price touch. However, under certain market conditions it may be &#10;impossible to execute orders (‘’Stop Loss’’, ‘’Take Profit’’, ‘’Buy Limit’’, ‘’Buy Stop’’, ‘’Sell &#10;Limit’’, ‘’Sell Stop’’) on any Financial Instrument at the declared price. In this case, the &#10;Company has the right to execute the Client Order at the best available price given the &#10;market depth and volatility for the given security at that point in time. More details on&#10;the casesthat this might occur can be found in the ‘’Order Execution Policy’’ of the&#10;Company which is accessible via the Company’s website under section ‘’Legal &#10;Documents’’.&#10;&#10;3. The Client will, unless otherwise agreed in writing, understands and acknowledges that&#10;the Company will enter into transactions with the client as Principal (counterparty) and &#10;not as an agent. The Company will be the contractual counterparty to the Client." noi18n="true"/>
+                  <wrapStyleWord value="false"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <hspacer id="18678">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="15" height="15"/>
+              </grid>
+            </constraints>
+          </hspacer>
+          <hspacer id="34624">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="15" height="15"/>
+              </grid>
+            </constraints>
+          </hspacer>
+          <vspacer id="c993d">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="15" height="15"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <vspacer id="b9ed1">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="15" height="15"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <component id="50b68" class="javax.swing.JButton" binding="acceptButton" default-binding="true">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Microsoft YaHei UI" style="0"/>
+              <text value="Accept"/>
+            </properties>
+          </component>
+          <component id="a5fb3" class="javax.swing.JButton" binding="canelButton" default-binding="true">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Microsoft YaHei UI" style="0"/>
+              <text value="Canel"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
