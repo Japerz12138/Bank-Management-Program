@@ -137,7 +137,8 @@ public class Login extends JFrame{
                         CustomerPortal cp = new CustomerPortal();
                         dispose();
                     } else if (selectedLoginType.equals("Employee")) {
-                        //TODO: Finish the EmployeePortal and switch window here!
+                        EmployeePortal ep = new EmployeePortal();
+                        dispose();
                     } else if (selectedLoginType.equals("Admin")) {
                         //TODO: Finish the AdminPortal and switch window here!
                     } else {

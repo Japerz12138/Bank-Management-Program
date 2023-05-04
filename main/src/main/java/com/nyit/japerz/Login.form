@@ -107,7 +107,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="Microsoft YaHei UI" style="0"/>
+            </properties>
           </component>
           <vspacer id="f228">
             <constraints>
@@ -160,7 +162,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="Microsoft YaHei UI" style="0"/>
+            </properties>
           </component>
           <component id="34d92" class="javax.swing.JButton" binding="newCustomerRegisterButton" default-binding="true">
             <constraints>

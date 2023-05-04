@@ -10,21 +10,20 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class CustomerPortal extends JFrame{
-    private JLabel header_CustomerName;
-    private JLabel header_Greating;
+public class EmployeePortal extends JFrame{
     private JButton logoutButton;
     private JPanel panel1;
-    private JButton accountsManagmentButton;
-    private JButton depositWithdrawButton;
-    private JButton messageBoxButton;
+    private JLabel header_Greating;
+    private JLabel header_CustomerName;
+    private JButton customerListButton;
+    private JButton bankAccountsListButton;
+    private JButton appointmentsButton;
     private JButton settingsButton;
 
-    public CustomerPortal() {
-
+    public EmployeePortal() {
         ImageIcon img = new ImageIcon("I:\\CODE\\Bank-Management-Program\\bank-flat.png");
         setContentPane(panel1);
-        setTitle("JM Bank - Customer Portal - " + Login.getUsernamePT());
+        setTitle("JM Bank - Employee Portal - " + Login.getUsernamePT());
         setSize(800, 550);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
@@ -39,8 +38,6 @@ public class CustomerPortal extends JFrame{
         } else {
             header_CustomerName.setText("ERROR");
         }
-
-        setLookAndFeel();
 
         //Logout function
         logoutButton.addActionListener(new ActionListener() {
@@ -57,29 +54,17 @@ public class CustomerPortal extends JFrame{
                 }
             }
         });
-        accountsManagmentButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                AccountManager am = new AccountManager();
-            }
-        });
 
-        messageBoxButton.addActionListener(new ActionListener() {
+        customerListButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                MessageBox mb = new MessageBox();
+                CustomerList cl = new CustomerList();
             }
         });
-        depositWithdrawButton.addActionListener(new ActionListener() {
+        bankAccountsListButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DepositWithdraw dw = new DepositWithdraw();
-            }
-        });
-        settingsButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                AccountSettings as = new AccountSettings();
+                AccountList al = new AccountList();
             }
         });
     }
@@ -114,15 +99,6 @@ public class CustomerPortal extends JFrame{
             header_Greating.setText("Good morning! ");
         } else {
             header_Greating.setText("Good afternoon! ");
-        }
-    }
-
-    //Modern look for Windows
-    public void setLookAndFeel() {
-        try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 }
