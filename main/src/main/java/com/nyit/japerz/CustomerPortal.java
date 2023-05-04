@@ -19,6 +19,7 @@ public class CustomerPortal extends JFrame{
     private JButton depositWithdrawButton;
     private JButton messageBoxButton;
     private JButton settingsButton;
+    private JButton appointmentButton;
 
     public CustomerPortal() {
 
@@ -80,6 +81,12 @@ public class CustomerPortal extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 AccountSettings as = new AccountSettings();
+            }
+        });
+        appointmentButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                OnlineAppointment oa = new OnlineAppointment();
             }
         });
     }

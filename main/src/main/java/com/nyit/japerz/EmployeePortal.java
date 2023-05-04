@@ -32,6 +32,8 @@ public class EmployeePortal extends JFrame{
 
         setGreeting();
 
+
+
         String customerName = getCustomerName();
         if (customerName != null) {
             header_CustomerName.setText(customerName);
@@ -65,6 +67,12 @@ public class EmployeePortal extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 AccountList al = new AccountList();
+            }
+        });
+        appointmentsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AppointmentList al = new AppointmentList();
             }
         });
     }
