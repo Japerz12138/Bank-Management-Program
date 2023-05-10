@@ -115,7 +115,7 @@ public class AccountList extends JFrame{
             String query = "SELECT customers.customers_name, accounts.account_number, accounts.balance " +
                     "FROM customers " +
                     "JOIN accounts ON customers.customers_id = accounts.customers_id " +
-                    "ORDER BY customers.customers_name ASC";
+                    "ORDER BY customers.customers_name ASC"; //This ASC means ascending order, DESC is descending
 
             ResultSet rs = statement.executeQuery(query);
 

@@ -140,7 +140,8 @@ public class Login extends JFrame{
                         EmployeePortal ep = new EmployeePortal();
                         dispose();
                     } else if (selectedLoginType.equals("Admin")) {
-                        //TODO: Finish the AdminPortal and switch window here!
+                        AdminPortal ap = new AdminPortal();
+                        dispose();
                     } else {
                         JOptionPane.showMessageDialog(null, "Something is wrong! Please contact a bank employee! Error code: L-001");
                     }
